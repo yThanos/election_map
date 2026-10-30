@@ -1,0 +1,6 @@
+[project]
+name = "demographic-election-map"
+version = "0.1.0"
+description = "Mapa 3D do Brasil: altura = população, cor = resultado do 2º turno presidencial (TSE)"
+requires-python = ">=3.11"
+dependencies = []

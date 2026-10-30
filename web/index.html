@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brasil 3D · 2º turno</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- deck.gl 9.1.14 (MIT) -->
+  <script src="https://unpkg.com/deck.gl@9.1.14/dist.min.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <aside id="painel">
+    <h1>Brasil 3D <span id="subtitulo">2º turno</span></h1>
+    <div id="placar">
+      <div class="lado lula"><b id="pct-lula">–</b><span>Lula</span></div>
+      <div class="lado outro"><b id="pct-outro">–</b><span id="nome-outro">–</span></div>
+    </div>
+    <div id="barra"><div id="barra-lula"></div></div>
+
+    <label>Altura
+      <select id="metrica">
+        <option value="pop">População</option>
+        <option value="dens">Densidade (hab/km²)</option>
+        <option value="votos">Votos válidos</option>
+      </select>
+    </label>
+    <label>Escala
+      <select id="escala">
+        <option value="sqrt">Raiz quadrada</option>
+        <option value="log">Logarítmica</option>
+        <option value="linear">Linear</option>
+      </select>
+    </label>
+    <label>Exagero vertical <output id="exagero-val">1.0×</output>
+      <input id="exagero" type="range" min="0.1" max="4" step="0.1" value="1">
+    </label>
+    <label class="check"><input id="contorno" type="checkbox"> Contorno dos municípios</label>
+
+    <div id="legenda"></div>
+    <p class="dica">Arraste para mover · Ctrl/botão direito + arraste para girar e inclinar</p>
+    <p class="fonte">Fontes: TSE (votos válidos), IBGE (população estimada e malha municipal)</p>
+  </aside>
+
+  <script src="main.js"></script>
+</body>
+</html>

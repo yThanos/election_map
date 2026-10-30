@@ -29,4 +29,3 @@ Opções do script: `--ano 2022` (outra eleição; o adversário é detectado so
 
 60+ · 56–60 · 53–56 · 50–53 (tons de vermelho) | 47–50 · 44–47 · 40–44 · <40 (tons de azul), paleta ColorBrewer RdBu.
 Os limites ficam em `FAIXAS`, em `web/main.js`.
-# election_map
