@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brasil em relevo · 2º turno</title>
+  <link rel="stylesheet" href="poster.css">
+  <!-- three.js 0.170.0 (MIT) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="cena"></div>
+
+  <header id="titulo">
+    <h1>Brasil em relevo</h1>
+    <p id="subtitulo">2º turno presidencial</p>
+    <p class="explica">Altura = densidade populacional · Cor = % de votos válidos</p>
+  </header>
+
+  <div id="legenda"></div>
+  <p id="creditos">Dados: TSE (votos válidos) · IBGE (população estimada e malha municipal)</p>
+
+  <aside id="painel">
+    <a href="./" class="voltar">← Mapa interativo</a>
+    <label>Exagero vertical <output id="exagero-val">1.0×</output>
+      <input id="exagero" type="range" min="0.2" max="3" step="0.1" value="1">
+    </label>
+    <label>Perfil do relevo
+      <select id="perfil">
+        <option value="sqrt">Raiz quadrada</option>
+        <option value="cbrt">Raiz cúbica (mais suave)</option>
+        <option value="log">Logarítmico (planaltos)</option>
+      </select>
+    </label>
+    <label>Cores
+      <select id="cores">
+        <option value="faixas">8 faixas</option>
+        <option value="continua">Contínua</option>
+      </select>
+    </label>
+    <label>Direção do sol <output id="sol-val">315°</output>
+      <input id="sol" type="range" min="0" max="359" step="1" value="315">
+    </label>
+    <label>Altura do sol <output id="elev-val">25°</output>
+      <input id="elev" type="range" min="5" max="80" step="1" value="25">
+    </label>
+    <button id="baixar">Baixar PNG (alta resolução)</button>
+    <p class="dica">Arraste para girar · botão direito para mover · roda para zoom · tecla <kbd>H</kbd> esconde o painel</p>
+  </aside>
+
+  <div id="carregando">Carregando relevo…</div>
+
+  <script type="module" src="poster.js"></script>
+</body>
+</html>

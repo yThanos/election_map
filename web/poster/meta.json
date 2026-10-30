@@ -1,0 +1,30 @@
+{
+  "cor": {
+    "largura": 2048,
+    "altura": 1986
+  },
+  "relevo": {
+    "largura": 1024,
+    "altura": 993
+  },
+  "densidade_max": 4868.42,
+  "km_por_px": 2.2435,
+  "sigma_km": 20,
+  "sigma_cor_km": 20,
+  "extensao": {
+    "lon": [
+      -74.4904,
+      -31.907899999999998
+    ],
+    "lat": [
+      -34.2439,
+      5.7718
+    ],
+    "kx": 0.9692908127652123
+  },
+  "ano": 2026,
+  "ano_pop": 2026,
+  "outro": "Flavio Bolsonaro",
+  "votos_lula": 64055133,
+  "votos_outro": 59652191
+}

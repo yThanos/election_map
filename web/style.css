@@ -67,6 +67,9 @@ label.check { display: flex; gap: 6px; align-items: center; }
 .leg-cor { width: 18px; height: 12px; border-radius: 2px; }
 .leg-n { margin-left: auto; color: var(--muted); }
 
+.link-poster { display: block; margin-top: 12px; color: var(--text); font-size: 13px; text-decoration: none; }
+.link-poster:hover { text-decoration: underline; }
+
 .dica, .fonte { color: var(--muted); font-size: 11px; margin: 12px 0 0; }
 
 .deck-tooltip { font: 13px/1.4 system-ui, sans-serif !important; border-radius: 6px; }

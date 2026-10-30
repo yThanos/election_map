@@ -1,0 +1,111 @@
+:root {
+  --bg: #0b0d12;
+  --panel: rgba(18, 21, 29, 0.88);
+  --text: #e8eaf0;
+  --muted: #8b93a7;
+  --border: #2a2f3d;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#cena { position: absolute; inset: 0; }
+
+#titulo {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  pointer-events: none;
+}
+#titulo h1 { margin: 0; font-size: 44px; font-weight: 300; letter-spacing: 0.02em; }
+#subtitulo { margin: 4px 0 0; font-size: 18px; color: var(--muted); }
+.explica { margin: 10px 0 0; font-size: 13px; color: var(--muted); }
+
+#legenda {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  pointer-events: none;
+  font-size: 12px;
+}
+.leg-placar { font-size: 15px; margin-bottom: 10px; }
+.leg-placar b { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.leg-faixas { display: flex; }
+.leg-faixas span { width: 34px; height: 10px; }
+.leg-rotulos { display: flex; justify-content: space-between; color: var(--muted); margin-top: 4px; width: 272px; }
+
+#creditos {
+  position: absolute;
+  bottom: 16px;
+  right: 24px;
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+#painel {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 250px;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+#painel.oculto { display: none; }
+
+.voltar { display: block; color: var(--text); text-decoration: none; margin-bottom: 12px; font-size: 13px; }
+.voltar:hover { text-decoration: underline; }
+
+label { display: block; margin-bottom: 12px; color: var(--muted); font-size: 12px; }
+label output { float: right; color: var(--text); }
+select, input[type=range] { display: block; width: 100%; margin-top: 4px; }
+select {
+  padding: 6px;
+  background: #1a1e29;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  background: #b2182b;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.6; cursor: wait; }
+
+.dica { color: var(--muted); font-size: 11px; margin: 10px 0 0; }
+kbd { padding: 0 4px; border: 1px solid var(--border); border-radius: 3px; }
+
+#carregando {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  #titulo { top: 16px; left: 16px; }
+  #titulo h1 { font-size: 28px; }
+  #legenda { left: 16px; bottom: 32px; }
+  #painel { top: auto; bottom: 16px; right: 16px; left: 16px; width: auto; max-height: 40%; overflow-y: auto; }
+}
